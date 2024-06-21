@@ -4,12 +4,28 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Giftbearer"
-    Shell.FlyoutBehavior="Disabled"
-    Title="Giftbearer">
+    Title="Giftbearer"
+    BackgroundColor="#1B1110"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutWidth="250" 
+    >
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+            Title="Main Menu"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" 
+            />
+    <ShellContent
+            Title="People"
+            ContentTemplate="{DataTemplate local:PeoplePage}"
+            Route="PeoplePage" />
+    <ShellContent
+            Title="Calendar"
+            ContentTemplate="{DataTemplate local:CalendarPage}"
+            Route="CalendarPage" />
+    <ShellContent
+            Title="Options"
+            ContentTemplate="{DataTemplate local:OptionsPage}"
+            Route="OptionsPage" />
 
 </Shell>
